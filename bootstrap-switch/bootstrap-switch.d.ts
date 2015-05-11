@@ -53,7 +53,7 @@ interface BootstrapSwitchSettings {
 	onColor?: string;
 
 	/** 
-	 * String	Color of the right side of the switch: 'primary', 'info', 'success', 'warning', 'danger', 'default'. 
+	 * Color of the right side of the switch: 'primary', 'info', 'success', 'warning', 'danger', 'default'. 
 	 */
 	offColor?: string;
 
