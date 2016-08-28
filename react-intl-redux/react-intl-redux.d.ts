@@ -101,6 +101,8 @@ declare namespace ReactIntlRedux {
 
   export function intlReducer(state, action): any;
 
+  export function updateIntl({locale?: string, formats?: Object, messages?: Object, defaultLocale?: string, defaultFormats?: Object}): any;
+
 }
 
 declare module "react-intl-redux" {
