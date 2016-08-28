@@ -94,6 +94,14 @@ declare namespace ReactIntlRedux {
     children?: ReactNode;
   }
 
+  export interface IntlProps {
+    locale?: string;
+    formats?: Object;
+    messages?: Object;
+    defaultLocale?: string;
+    defaultFormats?: Object;
+  }
+
   /**
    * Makes the Redux store available to the connect() calls in the component hierarchy below.
    */
@@ -101,7 +109,7 @@ declare namespace ReactIntlRedux {
 
   export function intlReducer(state, action): any;
 
-  export function updateIntl({locale?: string, formats?: Object, messages?: Object, defaultLocale?: string, defaultFormats?: Object}): any;
+  export function updateIntl(props: IntlProps): any;
 
 }
 
