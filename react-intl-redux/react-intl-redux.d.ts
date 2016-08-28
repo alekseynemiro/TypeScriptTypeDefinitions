@@ -1,4 +1,6 @@
 declare namespace ReactIntlRedux {
+  import React = __React;
+
   type ComponentClass<P> = __React.ComponentClass<P>;
   type StatelessComponent<P> = __React.StatelessComponent<P>;
   type ReactNode = __React.ReactNode;
@@ -110,6 +112,8 @@ declare namespace ReactIntlRedux {
   export function intlReducer(state, action): any;
 
   export function updateIntl(props: IntlProps): any;
+
+  export class IntlProvider extends React.Component<any, any> { }
 
 }
 
