@@ -25,7 +25,7 @@ declare module 'react-bootstrap-typeahead' {
       onFocus?: (e: Event) => void;
 
       /** Callback fired when user-input text changes. Receives the text string. */
-      onInputChange?: (e: Event) => void;
+      onInputChange?: (value: string) => void;
 
       /** Full set of options, including any pre-selected options. */
       options: Array<any>;
