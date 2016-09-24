@@ -16,16 +16,16 @@ declare module 'react-bootstrap-typeahead' {
     export interface Props {
 
       /** Callback fired whenever items are added or removed. Receives an array of the selected options. */
-      onChange?: () => void;
+      onChange?: (e: Event) => void;
 
       /** Callback fired when the input is blurred. Receives an event. */
-      onBlur?: () => void;
+      onBlur?: (e: Event) => void;
 
       /** Callback fired when the input is focused. Receives an event. */
-      onFocus?: () => void;
+      onFocus?: (e: Event) => void;
 
       /** Callback fired when user-input text changes. Receives the text string. */
-      onInputChange?: () => void;
+      onInputChange?: (e: Event) => void;
 
       /** Full set of options, including any pre-selected options. */
       options: Array<any>;
@@ -122,13 +122,13 @@ declare module 'react-bootstrap-typeahead' {
   export default class Typeahead extends React.Component<Typeahead.Props, any> { 
 
     /** Provides a programmatic way to blur the input. */
-    public blur(): void {}
+    public blur(): void;
 
     /** Provides a programmatic way to reset the input. Calling the method will clear both text and selection(s). */
-    public clear(): void {}
+    public clear(): void;
 
     /** Provides a programmatic way to focus the input. */
-    public focus(): void {}
+    public focus(): void;
 
   }
 
