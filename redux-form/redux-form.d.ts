@@ -538,4 +538,84 @@ declare module 'redux-form' {
 
   }
 
+
+  export function blur(form: string, field: string, value: string);
+
+  /**
+   * Saves the value to the field.
+   * @param form
+   * @param field
+   * @param value
+   */
+  export function change(form: string, field: string, value: string);
+
+  /**
+   * Destroys the form, removing all its state.
+   * @param form
+   */
+  export function destroy(form: string);
+
+  /**
+   * Marks the given field as active and visited.
+   * @param form
+   * @param field
+   */
+  export function focus(form: string, field: string);
+
+  /**
+   * Sets the initial values in the form with which future data values will be compared to calculate dirty and pristine.
+   * The data parameter may contain deep nested array and object values that match the shape of your form fields.
+   * IMPORTANT: The fields array passed must be the same as the one given as a config parameter to reduxForm().
+   * @param form
+   * @param data
+   * @param fields
+   */
+  export function initialize(form: string, data: any, fields: Array<string>);
+
+  /**
+   * Resets the values in the form back to the values past in with the most recent initialize action.
+   * @param form
+   */
+  export function reset(form: string);
+
+  /**
+   * Flips the asyncValidating flag true.
+   * @param form
+   */
+  export function startAsyncValidation(form: string);
+
+  /**
+   * Flips the submitting flag true.
+   * @param form
+   */
+  export function startSubmit(form: string);
+
+  /**
+   * Flips the submitting flag false and populates submitError for each field.
+   * @param form
+   * @param errors
+   */
+  export function stopSubmit(form: string, errors: any);
+
+  /**
+   * Flips the asyncValidating flag false and populates asyncError for each field.
+   * @param form
+   * @param errors
+   */
+  export function stopAsyncValidation(form: string, errors: any);
+
+  /**
+   * Marks all the fields passed in as touched.
+   * @param form
+   * @param fields
+   */
+  export function touch(form: string, ...fields: Array<string>);
+
+  /**
+   * Resets the 'touched' flag for all the fields passed in.
+   * @param form
+   * @param fields
+   */
+  export function untouch(form: string, ...fields: Array<string>);
+
 }
