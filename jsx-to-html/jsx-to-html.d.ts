@@ -4,7 +4,7 @@
 
 declare namespace JsxToHtml {
 
-  export function render(value: JSX.Element): string;
+  export function render(value: JSX.Element | string): string;
 
 }
 
