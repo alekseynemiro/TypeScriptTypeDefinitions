@@ -1,4 +1,4 @@
-﻿export interface YaMetrikaSettings {
+﻿interface YaMetrikaSettings {
 
   /** Идентификатор счетчика. */
   id: number;
@@ -25,3 +25,5 @@
   ecommerce: string;
 
 }
+
+declare var YaMetrikaSettings: YaMetrikaSettings;
