@@ -2,6 +2,9 @@
 // Project: https://github.com/pushtell/react-bootstrap-date-picker#readme
 // Definitions by: Karol Janyst <https://github.com/LKay>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
+// TypeScript Version: 2.3
+
+/// <reference path="../react/react.d.ts" />
 
 import { ComponentClass, StatelessComponent, ReactNode, FocusEventHandler, HTMLAttributes } from "react";
 
