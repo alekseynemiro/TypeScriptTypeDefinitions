@@ -8,13 +8,6 @@
 
 import { ComponentClass, StatelessComponent, ReactNode, FocusEventHandler, HTMLAttributes } from "react";
 
-export as namespace DatePicker;
-
-export = DatePicker;
-
-declare const DatePicker: DatePicker;
-type DatePicker = ComponentClass<DatePicker.DatePickerProps>;
-
 declare namespace DatePicker {
     type ChangeCallback = (value: string, formattedValue: string) => void;
 
@@ -44,4 +37,10 @@ declare namespace DatePicker {
         todayButtonLabel?: string;
         customControl?: StatelessComponent<any> | ComponentClass<any>;
     }
+}
+
+declare module 'react-bootstrap-date-picker' {
+
+  export = DatePicker;
+
 }
