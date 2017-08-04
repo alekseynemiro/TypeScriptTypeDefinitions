@@ -6,7 +6,7 @@
 
 /// <reference path="../react/react.d.ts" />
 
-import { ComponentClass, StatelessComponent, ReactNode, FocusEventHandler, HTMLAttributes } from "react";
+import { ComponentClass, StatelessComponent, ReactNode, EventHandler, HTMLAttributes } from "react";
 
 declare namespace DatePicker {
     type ChangeCallback = (value: string, formattedValue: string) => void;
@@ -19,8 +19,8 @@ declare namespace DatePicker {
         autoFocus?: boolean;
         disabled?: boolean;
         onChange?: ChangeCallback;
-        onFocus?: FocusEventHandler<any>;
-        onBlur?: FocusEventHandler<any>;
+        onFocus?: EventHandler<any>;
+        onBlur?: EventHandler<any>;
         dateFormat?: string;
         clearButtonElement?: ReactNode;
         showClearButton?: boolean;
