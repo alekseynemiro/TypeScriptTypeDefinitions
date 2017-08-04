@@ -31,7 +31,7 @@ declare module 'react-bootstrap-date-picker' {
     monthLabels?: string[];
     calendarPlacement?: string;
     calendarContainer?: any;
-    weekStartsOnMonday?: boolean;
+    weekStartsOn?: number;
     showTodayButton?: boolean;
     todayButtonLabel?: string;
     customControl?: React.StatelessComponent<any> | React.ComponentClass<any>;
