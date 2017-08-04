@@ -6,10 +6,10 @@
 
 /// <reference path="../react/react.d.ts" />
 
-import { ComponentClass, StatelessComponent, ReactNode, EventHandler, HTMLAttributes } from "react";
-
 declare module 'react-bootstrap-date-picker' {
   
+  import { ComponentClass, StatelessComponent, ReactNode, EventHandler, HTMLAttributes } from "react";
+
   namespace DatePicker {
       type ChangeCallback = (value: string, formattedValue: string) => void;
 
