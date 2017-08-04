@@ -4,43 +4,40 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.3
 
-/// <reference path="../react/react.d.ts" />
-
 declare module 'react-bootstrap-date-picker' {
-  
-  import { ComponentClass, StatelessComponent, ReactNode, EventHandler, HTMLAttributes } from "react";
 
-  namespace DatePicker {
-      type ChangeCallback = (value: string, formattedValue: string) => void;
+  import * as React from 'react';
 
-      interface DatePickerProps {
-          value?: string;
-          defaultValue?: string;
-          style?: any;
-          className?: string;
-          autoFocus?: boolean;
-          disabled?: boolean;
-          onChange?: ChangeCallback;
-          onFocus?: EventHandler<any>;
-          onBlur?: EventHandler<any>;
-          dateFormat?: string;
-          clearButtonElement?: ReactNode;
-          showClearButton?: boolean;
-          onClear?(): void;
-          previousButtonElement?: ReactNode;
-          nextButtonElement?: ReactNode;
-          cellPadding?: string;
-          dayLabels?: string[];
-          monthLabels?: string[];
-          calendarPlacement?: string;
-          calendarContainer?: any;
-          weekStartsOnMonday?: boolean;
-          showTodayButton?: boolean;
-          todayButtonLabel?: string;
-          customControl?: StatelessComponent<any> | ComponentClass<any>;
-      }
+  type ChangeCallback = (value: string, formattedValue: string) => void;
+
+  interface DatePickerProps {
+    value?: string;
+    defaultValue?: string;
+    style?: any;
+    className?: string;
+    autoFocus?: boolean;
+    disabled?: boolean;
+    onChange?: ChangeCallback;
+    onFocus?: React.EventHandler<any>;
+    onBlur?: React.EventHandler<any>;
+    dateFormat?: string;
+    clearButtonElement?: React.ReactNode;
+    showClearButton?: boolean;
+    onClear?(): void;
+    previousButtonElement?: React.ReactNode;
+    nextButtonElement?: React.ReactNode;
+    cellPadding?: string;
+    dayLabels?: string[];
+    monthLabels?: string[];
+    calendarPlacement?: string;
+    calendarContainer?: any;
+    weekStartsOnMonday?: boolean;
+    showTodayButton?: boolean;
+    todayButtonLabel?: string;
+    customControl?: React.StatelessComponent<any> | React.ComponentClass<any>;
   }
-  
-  export = DatePicker;
+
+  export default class DatePicker extends React.Component<DatePickerProps, any> {
+  }
 
 }
