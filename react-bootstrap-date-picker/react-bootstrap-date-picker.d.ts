@@ -8,39 +8,39 @@
 
 import { ComponentClass, StatelessComponent, ReactNode, EventHandler, HTMLAttributes } from "react";
 
-declare namespace DatePicker {
-    type ChangeCallback = (value: string, formattedValue: string) => void;
-
-    interface DatePickerProps {
-        value?: string;
-        defaultValue?: string;
-        style?: any;
-        className?: string;
-        autoFocus?: boolean;
-        disabled?: boolean;
-        onChange?: ChangeCallback;
-        onFocus?: EventHandler<any>;
-        onBlur?: EventHandler<any>;
-        dateFormat?: string;
-        clearButtonElement?: ReactNode;
-        showClearButton?: boolean;
-        onClear?(): void;
-        previousButtonElement?: ReactNode;
-        nextButtonElement?: ReactNode;
-        cellPadding?: string;
-        dayLabels?: string[];
-        monthLabels?: string[];
-        calendarPlacement?: string;
-        calendarContainer?: any;
-        weekStartsOnMonday?: boolean;
-        showTodayButton?: boolean;
-        todayButtonLabel?: string;
-        customControl?: StatelessComponent<any> | ComponentClass<any>;
-    }
-}
-
 declare module 'react-bootstrap-date-picker' {
+  
+  namespace DatePicker {
+      type ChangeCallback = (value: string, formattedValue: string) => void;
 
+      interface DatePickerProps {
+          value?: string;
+          defaultValue?: string;
+          style?: any;
+          className?: string;
+          autoFocus?: boolean;
+          disabled?: boolean;
+          onChange?: ChangeCallback;
+          onFocus?: EventHandler<any>;
+          onBlur?: EventHandler<any>;
+          dateFormat?: string;
+          clearButtonElement?: ReactNode;
+          showClearButton?: boolean;
+          onClear?(): void;
+          previousButtonElement?: ReactNode;
+          nextButtonElement?: ReactNode;
+          cellPadding?: string;
+          dayLabels?: string[];
+          monthLabels?: string[];
+          calendarPlacement?: string;
+          calendarContainer?: any;
+          weekStartsOnMonday?: boolean;
+          showTodayButton?: boolean;
+          todayButtonLabel?: string;
+          customControl?: StatelessComponent<any> | ComponentClass<any>;
+      }
+  }
+  
   export = DatePicker;
 
 }
